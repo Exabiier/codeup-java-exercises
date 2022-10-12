@@ -1,6 +1,5 @@
-
-
 public class HelloWorld {
+
     public static void main(String[] args) {
         System.out.println("hello World!");
         int myFavoriteNumber = 11;
@@ -38,8 +37,11 @@ public class HelloWorld {
         x = x / y;
         y = y - x;
 
+        y -= (x/=y);
+
 //        there will be data loss if you go past what the data type can hold
 
+        int max = Integer.MAX_VALUE;
     }
 
 }
