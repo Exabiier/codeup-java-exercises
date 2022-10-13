@@ -53,35 +53,39 @@ public class ControlFlowExercises {
 //            System.out.println("F");
 //            }
 
-//        Scanner sc = new Scanner(System.in);
-//        System.out.print("Continue? [y/N] ");
-//        String userInput = sc.next();
-//
-//        boolean confirmation = userInput.equals("y");
-//        if(confirmation){
-//            final int IMAX = 4;
-//            final double XMAX = 10;
-//
-//            for (int n=1; n<=IMAX; n++){
-//                System.out.printf("%10d", n);
-//            }
-//            System.out.println();
-//
-//            for (int n=1; n<=IMAX; n++){
-//                System.out.printf("%10s", "x");
-//            }
-//            System.out.println();
-//
-//            for (double i=1; i<=XMAX; i++) {
-//                for (int x = 1; x <=IMAX; x++) {
-//                    System.out.printf("%10.0f", Math.pow(i, x));
-//                } System.out.println();
-//            }
-//
-//        }
-//
-//
-//
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Continue? [y/N] ");
+        String userInput = sc.next();
+
+        boolean confirmation = userInput.equals("y");
+
+        System.out.println("What system would you like to go up to: ");
+        String userInput2 = sc.next();
+        if(confirmation){
+            final int IMAX = Integer.parseInt(userInput2);
+            final double XMAX = 10;
+            System.out.println("Here is your table!");
+
+            for (int n=1; n<=IMAX; n++){
+                System.out.printf("%10d", n);
+            }
+            System.out.println();
+
+            for (int n=1; n<=IMAX; n++){
+                System.out.printf("%10s", "x");
+            }
+            System.out.println();
+
+            for (double i=1; i<=XMAX; i++) {
+                for (int x = 1; x <=IMAX; x++) {
+                    System.out.printf("%10.0f", Math.pow(i, x));
+                } System.out.println();
+            }
+
+        }
+
+
+
     }
 
 }
