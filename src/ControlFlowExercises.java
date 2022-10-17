@@ -31,8 +31,13 @@ public class ControlFlowExercises {
 //        }
 
 //        for (int i = 1; i <= 100; i++ ) {
-//            if(i%3==0){
+//
+//            if(i % 3 == 0 && i % 5 == 0){
+//                System.out.println("Fizz ball");
+//            }else if(i%3==0){
 //                System.out.println("Fizz");
+//            } else if(i%5 == 0){
+//                System.out.println(i);
 //            } else{
 //            System.out.println(i);}
 //        }
@@ -52,37 +57,57 @@ public class ControlFlowExercises {
 //            } else {
 //            System.out.println("F");
 //            }
-
         Scanner sc = new Scanner(System.in);
         System.out.print("Continue? [y/N] ");
         String userInput = sc.next();
 
         boolean confirmation = userInput.equals("y");
 
-        System.out.println("What system would you like to go up to: ");
-        String userInput2 = sc.next();
-        if(confirmation){
-            final int IMAX = Integer.parseInt(userInput2);
-            final double XMAX = 10;
-            System.out.println("Here is your table!");
 
-            for (int n=1; n<=IMAX; n++){
-                System.out.printf("%10d", n);
-            }
-            System.out.println();
 
-            for (int n=1; n<=IMAX; n++){
-                System.out.printf("%10s", "x");
-            }
-            System.out.println();
+        if(confirmation) {
+            System.out.println("What system would you like to go up to: ");
+            int userInput2 = sc.nextInt();
 
-            for (double i=1; i<=XMAX; i++) {
-                for (int x = 1; x <=IMAX; x++) {
-                    System.out.printf("%10.0f", Math.pow(i, x));
-                } System.out.println();
+            System.out.println("here is your table");
+            System.out.println("");
+            System.out.println("number | squared | cubed");
+            System.out.println("------ | ------- | -----");
+            for (int i = 0; i <= userInput2; i++) {
+                System.out.printf("%-7d| %-8d| %-5d%n", i, i * i, i * i * i);
+
             }
 
         }
+
+
+
+
+
+
+//        if(confirmation){
+//            final int IMAX = Integer.parseInt(userInput2);
+//            final double XMAX = 10;
+//            System.out.println("Here is your table!");
+//
+//            for (int n=1; n<=IMAX; n++){
+//                System.out.printf("%10d", n);
+//            }
+//            System.out.println();
+//
+//            for (int n=1; n<=IMAX; n++){
+//                System.out.printf("%10s", "x");
+//
+//            }
+//            System.out.println("number | squared | cubed");
+//
+//            for (double i=1; i<=XMAX; i++) {
+//                for (int x = 1; x <=IMAX; x++) {
+//                    System.out.printf("%10.0f", Math.pow(i, x));
+//                } System.out.println();
+//            }
+//
+//        }
 
 
 
