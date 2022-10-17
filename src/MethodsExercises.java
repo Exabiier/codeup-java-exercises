@@ -34,15 +34,35 @@ public class MethodsExercises {
         }
     }
 
-    public static int getfactorial(int userInput){
-        int count = 1;
+    public static long getfactorial(int userInput){
+        System.out.println("would you like to caculate another factorial? y/n");
+        String userChoice = new Scanner(System.in).next();
+        long count = 1;
+        if(userChoice.equalsIgnoreCase("y")){
         for(int i = 1; i <userInput + 1; i++){
             count *= i;
         }
+        }
         return count;
-
     }
 
+    public static int generateRandomNumber(int max){
+        return (int) Math.ceil(Math.random()*max);
+    }
+
+    public static void rollDice(){
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("how many sides do you want?");
+        byte numberOfSides = scanner.nextByte();
+        System.out.printf("Your dice have %d sides.%n", numberOfSides);
+        System.out.println("Do you want to roll the dice? y/n");
+        String userChoice = scanner.next();
+        if(userChoice.equals("y")){
+            System.out.println("You rolled the dice!");
+            System.out.printf("You rolled %d and %d%n", generateRandomNumber(numberOfSides), generateRandomNumber(numberOfSides));
+        }
+        System.out.println("Would you like to roll again?");
+    }
     public static void diceRool(){
 
         while (true)
@@ -83,11 +103,11 @@ public class MethodsExercises {
 //        int b = mod(5,6);
 //        System.out.println(b);
 
-//   int x = getInteger(1,10);
-//   int y = getfactorial(x);
-//        System.out.println(y);
+   int x = getInteger(1,10);
+   long y = getfactorial(x);
+        System.out.println(y);
 
-        diceRool();
+rollDice();
 
 
 
