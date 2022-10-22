@@ -4,44 +4,49 @@ import org.w3c.dom.ls.LSOutput;
 import java.util.Scanner;
 
 public class Input {
-    private String scanner;
+    public Scanner scanner;
 
-    public String getScanner() {
-        return scanner;
-    }
 
-    Input(){
-        ;
-    }
-    Input(String userInput){
-        this.scanner = userInput;
-        System.out.println(userInput);
+//    public String getScanner() {
+//        return scanner;
+//    }
+
+    public  Input(){
+        this.scanner = new Scanner(System.in);
+
     }
 
-    Input(int userInput){
-        this.scanner = Integer.toString(userInput);
-    }
 
-    Input(double userInput){
-        this.scanner = Double.toString(userInput);
-    }
+
+
+//    public static void change(String input){
+//        this.scanner = input;
+//    }
+//    Input(String userInput){
+//        this.scanner = userInput;
+//        System.out.println(userInput);
+//    }
+//
+//    Input(int userInput){
+//        this.scanner = Integer.toString(userInput);
+//    }
+//
+//    Input(double userInput){
+//        this.scanner = Double.toString(userInput);
+//    }
 
     static String getString(){
         System.out.println("Enter a string:");
-        Scanner sc = new Scanner(System.in);
-        String userInput = sc.nextLine();
-        Input y = new Input(userInput);
-        y.scanner = userInput;
-        return y.scanner;
+//        Scanner sc = new Scanner(System.in);
+        Input x = new Input();
+        return x.scanner.nextLine();
     }
 
     static boolean yesNo(){
         System.out.println("Yes or no?:");
-        Scanner sc1 = new Scanner(System.in);
-        String ans = sc1.next();
-        Input z = new Input(ans);
-        z.scanner = ans;
-        if(z.scanner.equalsIgnoreCase("yes")){
+        Input x = new Input();
+        String z = x.scanner.nextLine();;
+        if(z.equalsIgnoreCase("yes")){
             return true;
         } else{
             return false;
@@ -50,9 +55,8 @@ public class Input {
 
     static int getInt(int min, int max){
         System.out.println("Pick a number 1 through 100:");
-        Scanner sc2 = new Scanner(System.in);
-        int userNumber = sc2.nextInt();
-        new Input(userNumber);
+        Input x = new Input();
+        int userNumber= x.scanner.nextInt();;
         if(min<userNumber && userNumber<max){
             return userNumber;
         }else{
@@ -63,10 +67,8 @@ public class Input {
 
     static int getInt(){
         System.out.println("Enter a Number:");
-        Scanner sc3 = new Scanner(System.in);
-        int userNumber2 = sc3.nextInt();
-        new Input(userNumber2);
-        return userNumber2;
+        Input x = new Input();
+        return x.scanner.nextInt();
 
 
     }
@@ -75,7 +77,6 @@ public class Input {
         System.out.println("Pick a number 1 through 100:");
         Scanner sc2 = new Scanner(System.in);
         double userNumber = sc2.nextDouble();;
-        new Input(userNumber);
         if(min<userNumber && userNumber<max){
             return userNumber;
         }else{
@@ -85,9 +86,8 @@ public class Input {
 
     static double getDouble(){
         System.out.println("Enter a Number:");
-        Scanner sc3 = new Scanner(System.in);
-        double userNumber2 = sc3.nextDouble();
-        new Input(userNumber2);
+        Input x = new Input();
+        double userNumber2= x.scanner.nextDouble();
         return userNumber2;
     }
 
@@ -108,16 +108,16 @@ public class Input {
 //
 //        boolean y = yesNo();
 //        System.out.println(y);
-
+//
 //        int c = getInt(0,101);
 //        System.out.println(c);
-
+//
 //        int v = getInt();
 //        System.out.println(v);
-
+//
 //        double g = getDouble(0,101);
 //        System.out.println(g);
-
+//
 //        double f = getDouble();
 //        System.out.println(f);
 

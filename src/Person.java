@@ -1,7 +1,7 @@
 
 
 public class Person {
-    private String name;
+    public String name;
 
     public String getName(){
     return this.name;
@@ -18,8 +18,12 @@ public class Person {
     }
 
     // constructor accepting single value
-    Person(String name) {
+    public Person(String name) {
         this.name = name;
+    }
+
+    public Person(){
+
     }
 
     public static void main(String[] args) {
