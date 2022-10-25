@@ -65,13 +65,22 @@ public class Input {
 
     }
 
+//    static int getInt(){
+//        System.out.println("Enter a Number:");
+//        Input x = new Input();
+//        return x.scanner.nextInt();
+//
+//
+//    }
+
+
     static int getInt(){
-        System.out.println("Enter a Number:");
-        Input x = new Input();
-        return x.scanner.nextInt();
-
-
+            System.out.println("Enter a Number:");
+            Input x = new Input();
+            String y = x.scanner.nextLine();
+            return Integer.valueOf(y);
     }
+
 
     static double getDouble(double min, double max){
         System.out.println("Pick a number 1 through 100:");
@@ -87,8 +96,8 @@ public class Input {
     static double getDouble(){
         System.out.println("Enter a Number:");
         Input x = new Input();
-        double userNumber2= x.scanner.nextDouble();
-        return userNumber2;
+        String userNumber2= x.scanner.nextLine();
+        return Double.valueOf(userNumber2);
     }
 
 
@@ -125,8 +134,27 @@ public class Input {
 
 //        System.out.println(f.getScanner());
 
+
+/////////////////////////////////////////////////////////
+        try {
+            getInt();
+
+        }  catch(NumberFormatException nfe){
+            System.out.println("Please Enter a real number");
+        }
+
+        try{
+            getDouble();
+        }  catch(NumberFormatException nfe){
+            System.out.println("Please give a Double Type");
+        }
+
+
+////////////////////////////////////////////////////////////////////
+        }
+
     }
 
 
-}
+
 
