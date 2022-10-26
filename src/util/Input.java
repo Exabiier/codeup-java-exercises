@@ -78,7 +78,12 @@ public class Input {
             System.out.println("Enter a Number:");
             Input x = new Input();
             String y = x.scanner.nextLine();
-            return Integer.valueOf(y);
+            try {
+                return Integer.valueOf(y);
+            } catch(NumberFormatException nfe){
+                System.out.println("Please Enter a real number");
+               return getInt();
+            }
     }
 
 
@@ -136,12 +141,10 @@ public class Input {
 
 
 /////////////////////////////////////////////////////////
-        try {
+
             getInt();
 
-        }  catch(NumberFormatException nfe){
-            System.out.println("Please Enter a real number");
-        }
+
 
         try{
             getDouble();
